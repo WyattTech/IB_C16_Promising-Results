@@ -1,7 +1,7 @@
 // setTimeout(() => {
 //   console.log("Let's get started");
 //   slowMath
-//     .add(6, 2)
+//     .add(1, 2)
 //     .then((results) => {
 //       console.log(`The number is ${results}`);
 //       return slowMath.multiply(results, 2);
@@ -36,18 +36,18 @@
 //     })
 //     .then((results) => {
 //       try {
-//         if (results > 0) {
+//         if (results !== 0) {
 //           console.log("Everything went well");
 //         }
 //       } catch (error) {
-//         if (!results) {
 //           console.log(error);
-//         }
+      
 //       } finally {
 //         console.log(`The the final results is ${results}`);
 //       }
 //     }, 1000);
 // });
+
 
 async function doMath() {
   
@@ -85,6 +85,10 @@ async function doMath() {
     console.log("Something went wrong");
   } finally {
     console.log("Everybody is a winner!");
+    
   }
+  setTimeout(() => {
+    console.clear();
+  }, 5000);  //Added this during the walkthrough
 }
 doMath();
